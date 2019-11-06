@@ -87,6 +87,7 @@ class Student extends Person {
         const self = this;
         return `Hello, my name is ${self.name} and I work in ${self.department}`;
     }
+
 }
 
 let john = new Student("Royce", "Computer Engineering");
@@ -95,21 +96,3 @@ console.log(john.speak());
 
 
 
-class Octopus {
-    readonly name: string;
-    readonly numberOfLegs: number = 8;
-    constructor(name: string) {
-        this.name = name;
-    }
-}
-
-let dad = new Octopus("Man with 8 strong legs");
-// error! name is readonly. dad.name = "Man with a 3-piece suit"
-
-
-// Parameter as properties for all modifiers
-class Food {
-    constructor(public type: string, private color: string, readonly size: number, protected ingredients: string) {
-
-    }
-}
